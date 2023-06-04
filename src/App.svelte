@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { setValue, valueStore, setOperation, equal } from './+server';
-
-	let value;
+	
 	$: value = $valueStore;
 </script>
   
