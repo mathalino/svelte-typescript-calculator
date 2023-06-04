@@ -1,10 +1,9 @@
 import { writable } from 'svelte/store';
 
 export const valueStore = writable<InputValue>({
-  value: "",
   state: "",
   total: 0,
-  consoleValue: ""
+  consoleValue: "0"
 });
 
 function resolveState() {
@@ -54,7 +53,7 @@ export function setValue(input: string) {
     if (input === "C") {
       e.total = 0;
       e.state = "";
-      e.consoleValue = "";
+      e.consoleValue = "0";
       return e;
     }
     e.consoleValue += input;
@@ -70,3 +69,4 @@ export function equal() {
     return e;
   });
 }
+
