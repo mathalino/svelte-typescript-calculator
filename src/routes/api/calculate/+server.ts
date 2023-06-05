@@ -6,19 +6,19 @@ export async function POST({ request }) {
   const { state, consoleValue } = await request.json();
   switch (state) {
     case 'add':
-      total += parseFloat(consoleValue);
+      total += parseInt(consoleValue);
       break;
     case 'subtract':
-        total -= parseFloat(consoleValue);
+        total -= parseInt(consoleValue);
         break;
     case 'multiply':
-        total *= parseFloat(consoleValue);
+        total *= parseInt(consoleValue);
         break;
     case 'divide':
-        total /= parseFloat(consoleValue);
+        total /= parseInt(consoleValue);
         break;
     default:
-        total = parseFloat(consoleValue);
+        total = parseInt(consoleValue);
         break;
     }
   

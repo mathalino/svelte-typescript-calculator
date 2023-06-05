@@ -26,15 +26,12 @@
         consoleValue = "";
       }
 
-      if (state === "equal") {
-        state = "";
-      }
-
       if (value === "C") {
         state = "";
         consoleValue = "0";
         return;
       }
+      
       consoleValue += value;
     }
 
@@ -125,9 +122,9 @@
 		display:flex;
 	}
 	.calculator .equal button {
-		margin-left:.15rem;
+		margin:.15rem;
 		width:50px;
-		height:100%;
+		height:98%;
 		background:#eeae00;
 		color:#eee;
         border: none;
