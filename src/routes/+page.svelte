@@ -2,21 +2,22 @@
 
     let consoleValue = "0";
     let state = "";
-  
+    let total = 0;
+
     async function calculate() {
       const response = await fetch('/api/calculate', {
         method: 'POST',
-        body: JSON.stringify({ state, consoleValue }),
+        body: JSON.stringify({ state, consoleValue, total }),
         headers: {
           'Content-Type': 'application/json'
         }
       });
-      const { total } = await response.json();
-      return total;
+      const { totalValue } = await response.json();
+      return totalValue;
     }
   
     function setOperation(operation) {
-        calculate();
+        total = parseInt(consoleValue);
         consoleValue = "0";
         state = operation;        
     }
